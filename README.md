@@ -3,6 +3,7 @@
 The app let's user browses generic 'post' feed provided by the API.
 
 Post is a generic POJO containing ids & some metas, i.e.:
+
   {
     "userId": 1,
     "id": 1,
