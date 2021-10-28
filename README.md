@@ -27,6 +27,7 @@ Non-functional behind-the-scenes:
 REFERENCE
 
 API homepage https://jsonplaceholder.typicode.com/
+
 Posts example response https://jsonplaceholder.typicode.com/posts
 
 RUN
