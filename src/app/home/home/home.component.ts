@@ -26,4 +26,13 @@ export class HomeComponent implements OnInit {
     this.posts = posts;
   }
 
+  onClickPost(postId: number) {
+    const post = this.posts.find(p => p.id === postId);
+    if (post) {
+      post.showUserId = !post.showUserId;
+    } else {
+      throw 'post not found';
+    }
+  }
+
 }

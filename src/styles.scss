@@ -2,6 +2,7 @@
 body, html {
   padding: 0;
   margin: 0;
+  position: relative;
 }
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';

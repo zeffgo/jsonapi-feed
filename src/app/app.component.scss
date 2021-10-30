@@ -6,3 +6,19 @@ header {
     letter-spacing: 10px;
   }
 }
+
+$footerDim: 60px;
+footer {
+  padding-right: $footerDim;
+  text-align: right;
+  font-style: italic;
+  bottom: 0;
+  height: $footerDim;
+  .x-quote {
+    width: clamp(300px, 80%, 1100px);
+  }
+}
+
+:host {
+  padding-bottom: $footerDim;
+}
