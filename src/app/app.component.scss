@@ -16,6 +16,7 @@ footer {
   height: $footerDim;
   .x-quote {
     width: clamp(300px, 80%, 1100px);
+    font-size: 18px;
   }
 }
 

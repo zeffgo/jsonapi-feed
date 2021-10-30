@@ -3,7 +3,8 @@
     (click)="onClickPost(post.id)"
     class="x-ja-post shadow d-flex justify-content-center align-items-center"
     [class.x-show-user-id]="post.showUserId"
-    [attr.data-userId]="post.userId"
+    [ngbTooltip]="post.title"
+    placement="bottom"
     *ngFor="let post of posts">
       <span>{{post.showUserId ? post.userId : post.id}}</span>
   </div>

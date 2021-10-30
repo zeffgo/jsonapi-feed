@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     if (post) {
       post.showUserId = !post.showUserId;
     } else {
-      throw 'post not found';
+      throw new Error('post not found');
     }
   }
 
