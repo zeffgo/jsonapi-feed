@@ -1,7 +1,8 @@
-<header>
+<header class="d-flex justify-content-between">
   <h3 class="my-3">
     <span class="x-letter-spacing-w">JSONAPI</span>
   </h3>
+  <span *ngIf="postsFlipped > 0">Posts 'flipped': {{postsFlipped}}</span>
 </header>
 
 <router-outlet></router-outlet>

@@ -3,17 +3,18 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 
-import { homeRoutes } from './home-routes';
-import { HomeComponent } from './home/home.component';
+import { postsRoutes } from './posts-routes';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { PostsComponent } from './posts/posts.component';
+import { PostsService } from './posts.service';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [PostsComponent],
   imports: [
     CommonModule,
     HttpClientModule,
     NgbTooltipModule,
-    RouterModule.forChild(homeRoutes)
-  ]
+    RouterModule.forChild(postsRoutes)
+  ],
 })
-export class HomeModule { }
+export class PostsModule { }

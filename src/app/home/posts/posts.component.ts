@@ -1,25 +1,25 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { environment } from 'src/environments/environment';
-import { Post } from './interfaces';
+import { Post, PostsService } from '../posts.service';
 
 @UntilDestroy()
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-posts',
+  templateUrl: './posts.component.html',
+  styleUrls: ['./posts.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class PostsComponent implements OnInit {
 
   posts: Post[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private postsService: PostsService) { }
 
   ngOnInit(): void {
-    this.http.get<Post[]>(`${environment.jsonApiURL}/posts`)
+    this.postsService.posts$
       .pipe(untilDestroyed(this))
       .subscribe((response: Post[]) => this.onPostsLoaded(response));
+
+    this.postsService.fetchPosts();
   }
 
   onPostsLoaded(posts: Post[]) {
@@ -30,6 +30,11 @@ export class HomeComponent implements OnInit {
     const post = this.posts.find(p => p.id === postId);
     if (post) {
       post.showUserId = !post.showUserId;
+      if (post.showUserId) {
+        this.postsService.incPostsShowingUserId();
+      } else {
+        this.postsService.decPostsShowingUserId();
+      }
     } else {
       throw new Error('post not found');
     }
