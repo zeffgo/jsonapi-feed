@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
-import { PostsService } from './home/posts.service';
+import { PostsService } from './posts/posts.service';
 
 @NgModule({
   declarations: [

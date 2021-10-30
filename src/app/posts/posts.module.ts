@@ -5,16 +5,16 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { postsRoutes } from './posts-routes';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
-import { PostsComponent } from './posts/posts.component';
-import { PostsService } from './posts.service';
+import { PostComponent } from '../posts/post/post.component';
+import { PostsComponent } from './posts.component';
 
 @NgModule({
-  declarations: [PostsComponent],
+  declarations: [PostsComponent, PostComponent],
   imports: [
     CommonModule,
     HttpClientModule,
     NgbTooltipModule,
     RouterModule.forChild(postsRoutes)
-  ],
+  ]
 })
 export class PostsModule { }

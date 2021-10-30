@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { PostsService } from './home/posts.service';
+import { PostsService } from './posts/posts.service';
 
 export const APP_NAME = 'Jsonfeed';
 @UntilDestroy()
