@@ -1,38 +1,27 @@
-# JSONPLACEHOLDER based feed
+# Tmp
 
-The app let's user browses generic 'post' feed provided by the API.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
 
-Post is a generic POJO containing ids & some metas, i.e.:
+## Development server
 
-  {
-    "userId": 1,
-    "id": 1,
-    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-  }
-  
-Functional:
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-1. The user can see visual representation of post objects (squares with postId) in the UI
-2. The user may interact with UI by clicking a post and see id of a user who 'posted' the post
-  (b) this works bi-directionally, user may click again and see postId again
-3. Tooltip provided to preview post metas, when hovering over post with mouse
-4. [BONUS BRANCH] toolbar showing statistics gathered from global state (see 'Non-functional')
+## Code scaffolding
 
-Non-functional behind-the-scenes:
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-1. Presentational components showing posts
-2. Smart master component (HomeComponent) managing posts state
-3. [BONUS BRANCH] service to manage state with rxjs injected to HomeComponent
+## Build
 
-REFERENCE
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-API homepage https://jsonplaceholder.typicode.com/
+## Running unit tests
 
-Posts example response https://jsonplaceholder.typicode.com/posts
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-RUN
-1. npm i
-2. cmd 'npm start' in terminal
+## Running end-to-end tests
 
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
