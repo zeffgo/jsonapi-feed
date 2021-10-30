@@ -9,4 +9,5 @@ export const APP_NAME = 'Jsonfeed';
 })
 export class AppComponent {
   title = APP_NAME;
+  
 }
