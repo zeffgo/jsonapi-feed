@@ -1,0 +1,12 @@
+<ng-template #tip>
+  <p class="text-capitalize">{{post.title}}</p>
+  {{post.body}}
+</ng-template>
+
+<div 
+  class="w-100 h-100 p-2 shadow d-flex justify-content-center align-items-center"
+  [class.x-show-user-id]="post.showUserId"
+  [ngbTooltip]="tip"
+  placement="bottom">
+    <span>{{post.showUserId ? post.userId : post.id}}</span>
+</div>

@@ -6,11 +6,11 @@ import { Post } from './interfaces';
 
 @UntilDestroy()
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-posts',
+  templateUrl: './posts.component.html',
+  styleUrls: ['./posts.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class PostsComponent implements OnInit {
 
   posts: Post[] = [];
 

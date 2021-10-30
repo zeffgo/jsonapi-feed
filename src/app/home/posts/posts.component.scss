@@ -1,0 +1,11 @@
+.x-ja-wrapper {
+  width: clamp(300px, 80%, 1100px);
+  margin: 100px auto 0;
+  padding-bottom: 100px;
+  justify-content: space-between;
+  .x-ja-post {
+    width: clamp(60px, 7%, 100px);
+    margin: clamp(15px, 1%, 20px);
+    height: 60px;
+  }
+}
