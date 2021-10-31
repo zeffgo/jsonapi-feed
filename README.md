@@ -1,4 +1,4 @@
-# JSON-Placeholder api browser
+# JSON-Placeholder API browser
 
 Built with Angular 12
 Allows to browse 100 posts, provided by public JSON Placeholder API
@@ -14,7 +14,7 @@ For rxjs-shared-state - fetching is done by Posts Service class.
 * rxjs-shared-state: on this branch when 'flipping' a Post component -
 app gets updated and shows 'flipped' count in header (if count > 0)
 
-** 'flip a post' - clicking a Post component triggers a 'rotating' animation
+* 'flip a post' - clicking a Post component triggers a 'rotating' animation
 
 # Run & Live demo
 
