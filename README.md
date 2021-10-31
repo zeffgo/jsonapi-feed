@@ -1,27 +1,29 @@
-# Tmp
+# JSON-Placeholder api browser
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+Built with Angular 12
+Allows to browse 100 posts, provided by public JSON Placeholder API
 
-## Development server
+# App Structure
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+App has one module/route showing Posts (master/smart cmp), 
+displaying 100 post objects visualized by Post (presentational cmp)
 
-## Code scaffolding
+For 'main' branch fetching data is done in Posts cmp.
+For rxjs-shared-state - fetching is done by Posts Service class.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* rxjs-shared-state: on this branch when 'flipping' a Post component -
+app gets updated and shows 'flipped' count in header (if count > 0)
 
-## Build
+** 'flip a post' - clicking a Post component triggers a 'rotating' animation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Run & Live demo
 
-## Running unit tests
+Run with npm start:dev, as start reserved for deployed runtime
+OR 
+`npm run build`, then open localhost:8080
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Live demo: https://jsonfeed-browser.herokuapp.com/ (rxjs-shared-state branch deployed)
 
-## Running end-to-end tests
+# Links
+API / Docs + examples - https://jsonplaceholder.typicode.com/
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
