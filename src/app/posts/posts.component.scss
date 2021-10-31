@@ -7,28 +7,5 @@
     width: clamp(60px, 7%, 100px);
     margin: clamp(15px, 1%, 20px);
     height: 60px;
-    padding: 10px;
-    line-height: 100%;
-    cursor: pointer;
-    &:not(.x-show-user-id) {
-      animation: rotateY 0.3s reverse;
-      &:active {
-        animation: none;  /* hack to restart animation */
-      }
-    }
-    &.x-show-user-id {
-      background-color: #000;
-      color: #fff;
-      animation: rotateY 0.3s;
-      &:active {
-        animation: none;
-      }
-    }
   }
-}
-
-@keyframes rotateY {
-  0% { color: #000; transform: rotateY(0); }
-  80% { color: #000; transform: rotateY(180deg); }
-  100% {color: #fff;}
 }

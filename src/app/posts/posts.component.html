@@ -1,11 +1,3 @@
 <div class="x-ja-wrapper d-flex flex-wrap">
-  <div 
-    (click)="onClickPost(post.id)"
-    class="x-ja-post shadow d-flex justify-content-center align-items-center"
-    [class.x-show-user-id]="post.showUserId"
-    [ngbTooltip]="post.title"
-    placement="bottom"
-    *ngFor="let post of posts">
-      <span>{{post.showUserId ? post.userId : post.id}}</span>
-  </div>
+  <app-post [post]="post" class="x-ja-post" (click)="onClickPost(post.id)" *ngFor="let post of posts"></app-post>
 </div>

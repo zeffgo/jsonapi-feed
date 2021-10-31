@@ -1,4 +1,4 @@
-import { ComponentFixture, discardPeriodicTasks, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PostsComponent } from './posts.component';
 import { PostsModule } from './posts.module';
 
