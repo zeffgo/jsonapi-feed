@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node node_modules/.bin/http-server -U -g -P https://jsonfeed-browser.herokuapp.com/?",
+    "start:dev": "ng serve",
+    "build": "ng build --prod --build-optimizer=true --stats-json=true --output-path=public",
     "watch": "ng build --watch --configuration development",
     "test": "jest --clearCache && jest --collect-coverage",
     "test:ci": "jest --runInBand --collect-coverage"
