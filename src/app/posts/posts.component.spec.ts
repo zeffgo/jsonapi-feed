@@ -1,54 +1,49 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-<<<<<<< HEAD
-
-<<<<<<< HEAD:src/app/home/posts/posts.component.spec.ts
+import { ComponentFixture, discardPeriodicTasks, TestBed } from '@angular/core/testing';
 import { PostsComponent } from './posts.component';
+import { PostsModule } from './posts.module';
 
-=======
-import { PostsComponent } from './posts.component';
+const mockPosts = [1, 2, 3].map((id, index) => ({
+  id,
+  userId: index,
+  title: 'title' + index,
+  body: 'body' + index,
+  showUserId: false
+}));
 
-
->>>>>>> 090ff66a4db4154f8780a2f331322887468ffab8
 describe('PostsComponent', () => {
   let component: PostsComponent;
   let fixture: ComponentFixture<PostsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostsComponent ]
-<<<<<<< HEAD
-=======
-import { PostComponent } from './post.component';
-
-describe('PostComponent', () => {
-  let component: PostComponent;
-  let fixture: ComponentFixture<PostComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ PostComponent ]
->>>>>>> 090ff66a4db4154f8780a2f331322887468ffab8:src/app/posts/post/post.component.spec.ts
-=======
->>>>>>> 090ff66a4db4154f8780a2f331322887468ffab8
+      imports: [PostsModule],
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD:src/app/home/posts/posts.component.spec.ts
     fixture = TestBed.createComponent(PostsComponent);
-=======
-    fixture = TestBed.createComponent(PostComponent);
->>>>>>> 090ff66a4db4154f8780a2f331322887468ffab8:src/app/posts/post/post.component.spec.ts
-=======
-    fixture = TestBed.createComponent(PostsComponent);
->>>>>>> 090ff66a4db4154f8780a2f331322887468ffab8
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  
+  it('should start w/o posts; then store posts in class once rcvd', () => {
+    expect(component.posts.length).toBe(0);
+    component.onPostsLoaded(mockPosts);
+    expect(component.posts.length).toBe(mockPosts.length);
+  });
+
+  it('should flip showUser boolean on clicking if post found; throw if not', () => {
+    component.posts = mockPosts;
+    expect(component.posts[0].showUserId).toBeFalsy();
+
+    component.onClickPost(component.posts[0].id);
+    expect(component.posts[0].showUserId).toBeTruthy();
+
+    expect( function(){ component.onClickPost(-Infinity) } ).toThrow();
   });
 });
