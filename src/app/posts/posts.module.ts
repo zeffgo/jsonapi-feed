@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 
 import { postsRoutes } from './posts-routes';
-import { PostsComponent } from './posts/posts.component';
+import { PostsComponent } from './posts.component';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { PostComponent } from '../posts/post/post.component';
 

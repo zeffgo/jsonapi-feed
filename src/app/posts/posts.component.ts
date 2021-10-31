@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment';
 import { Post } from './interfaces';
 
 @UntilDestroy()
