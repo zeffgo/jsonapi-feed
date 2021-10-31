@@ -27,3 +27,7 @@ Live demo: https://jsonfeed-browser.herokuapp.com/ (rxjs-shared-state branch dep
 # Links
 API / Docs + examples - https://jsonplaceholder.typicode.com/
 
+# Misc
+During development of the app I solved a problem of integrating JEST in Angular 12.
+Below link to a post I wrote about it :)
+https://tdsnip.blogspot.com/2021/10/using-jest-in-angular-12.html 
