@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "jest --clearCache --collect-coverage",
+    "test": "jest --clearCache && jest --collect-coverage",
     "test:ci": "jest --runInBand --collect-coverage"
   },
   "private": true,
